@@ -8,7 +8,9 @@ const DisplayResources = () => {
   useEffect(() => {
     const fetchResources = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/resources");
+        const response = await axios.get(
+          "https://pathfinder-ai.onrender.com/api/resources"
+        );
         // console.log(response.data);
         setResources(response.data);
       } catch (error) {
@@ -55,7 +57,7 @@ const DisplayResources = () => {
                   )}
                   {resource.file && (
                     <a
-                      href={`http://localhost:5000/uploads/${resource.file}`}
+                      href={`https://pathfinder-ai.onrender.com/uploads/${resource.file}`}
                       download
                       className="btn btn-link text-green-600 hover:underline"
                     >

@@ -41,7 +41,7 @@ const UpdateProfile = () => {
     try {
       // Make the Axios request to update the user profile with FormData
       const response = await axios.put(
-        "http://localhost:5000/api/v1/user/me/update",
+        "https://pathfinder-ai.onrender.com/api/v1/user/me/update",
         formData,
         {
           headers: {

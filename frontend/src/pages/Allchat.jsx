@@ -3,7 +3,9 @@ import { useParams } from "react-router-dom";
 import { io } from "socket.io-client";
 
 // Initialize Socket.io connection to the backend server (localhost:5000)
-const socket = io("http://localhost:5000", { withCredentials: true });
+const socket = io("https://pathfinder-ai.onrender.com", {
+  withCredentials: true,
+});
 
 const AllChat = () => {
   const { id: communityId } = useParams(); // Use community ID from URL params

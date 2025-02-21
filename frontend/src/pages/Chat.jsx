@@ -18,9 +18,12 @@ const Chatbot = () => {
     setUserInput(""); // Reset input
 
     try {
-      const res = await axios.post("http://localhost:5000/api/chat", {
-        query: userInput,
-      });
+      const res = await axios.post(
+        "https://pathfinder-ai.onrender.com/api/chat",
+        {
+          query: userInput,
+        }
+      );
       const aiResponse = res.data.message.parts[0].text;
       setResponses((prev) => [
         ...prev.slice(0, prev.length - 1),
