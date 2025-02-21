@@ -91,7 +91,7 @@ const ManageUsers = () => {
                 <td>{user.username}</td>
                 <td>
                   <img
-                    src={user.avatar}
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQDKWUgyPYinvZYb-8lbLAsCPp4j_toM09lQ&s"
                     alt="avatar"
                     className="w-24 h-24 rounded-full"
                   />

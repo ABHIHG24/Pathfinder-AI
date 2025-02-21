@@ -1,7 +1,7 @@
 import about1 from "../assets/Images/About1.jpg";
-import about2 from "../assets/Images/about2.jpg";
-import about3 from "../assets/Images/about3.jpeg";
-import about4 from "../assets/Images/about4.jpg";
+import about2 from "../assets/Images/About2.jpg";
+import about3 from "../assets/Images/About3.jpeg";
+import about4 from "../assets/Images/About4.jpg";
 
 const About = () => {
   const images = [about4, about1, about2, about3];

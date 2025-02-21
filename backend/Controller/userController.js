@@ -104,7 +104,7 @@ const forgetPassword = async (req, res, next) => {
     try {
       await sendEmail({
         to: foundUser.email,
-        subject: "Password Change Request Received from AyurBharat",
+        subject: "Password Change Request Received from Pathfinder AI",
         text: message,
       });
 

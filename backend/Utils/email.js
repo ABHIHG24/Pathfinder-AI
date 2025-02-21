@@ -12,7 +12,7 @@ const sendEmail = async (options) => {
   });
 
   const mailOptions = {
-    from: "FitPulse@gmail.com",
+    from: "Pathfinder@gmail.com",
     to: options.to,
     subject: options.subject,
     text: options.text,

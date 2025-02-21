@@ -57,7 +57,7 @@ const ManageFitMap = () => {
 
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold text-center mb-6">Manage FitMaps</h1>
+      <h1 className="text-3xl font-bold text-center mb-6">Manage Roadmaps</h1>
 
       {/* Roadmaps Table */}
       <div className="overflow-x-auto">

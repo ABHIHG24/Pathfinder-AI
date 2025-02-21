@@ -85,7 +85,7 @@ const RegistrationForm = ({ setRole }) => {
           className="hidden lg:block lg:w-1/2 bg-cover"
           style={{
             backgroundImage:
-              "url('https://biblereasons.com/wp-content/uploads/2020/01/health-quote.jpg ')",
+              "url('https://www.shutterstock.com/image-vector/never-stop-learning-education-vector-260nw-774864943.jpg')",
           }}
         ></div>
 
