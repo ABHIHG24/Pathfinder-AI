@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-const ErrorHandler = require("../utils/errorHandler.js");
-=======
 const ErrorHandler = require("../Utils/errorHandler.js");
->>>>>>> 5818c72 (corrected)
 
 module.exports = (err, req, res, next) => {
   err.statusCode = err.statusCode || 500;
