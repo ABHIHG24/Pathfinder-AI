@@ -33,6 +33,7 @@ const corsOptions = {
   },
   credentials: true,
 };
+app.use(cors(corsOptions));
 
 // Database connection
 connectDatabase();
