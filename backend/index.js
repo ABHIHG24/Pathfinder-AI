@@ -18,7 +18,21 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // CORS setup
-app.use(cors({ origin: true, credentials: true }));
+const allowedOrigins = [
+  "http://localhost:5173", // For development
+  "https://pathfinder-ai-2-u7yu.onrender.com", // For production
+];
+
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
+};
 
 // Database connection
 connectDatabase();
