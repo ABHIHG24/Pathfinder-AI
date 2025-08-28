@@ -3,7 +3,10 @@ import { useParams } from "react-router-dom";
 import { io } from "socket.io-client";
 
 // Initialize Socket.io connection to the backend server (localhost:5000)
-const socket = io("https://pathfinder-ai.onrender.com", {
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL; // http://localhost:5000/api/v1
+const url = new URL(API_BASE_URL);
+const socket = io(url.origin, {
+  path: "/api/v1/socket.io",
   withCredentials: true,
 });
 

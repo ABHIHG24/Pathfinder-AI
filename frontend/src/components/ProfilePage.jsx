@@ -8,7 +8,7 @@ const ProfilePage = () => {
   const user = useSelector((state) => state.userState.user);
   const { username, email, profilePhoto } = user;
   const img = profilePhoto
-    ? `https://pathfinder-ai.onrender.com/api/image/${user.profilePhoto}`
+    ? `${import.meta.env.VITE_API_BASE_URL}/${user.profilePhoto}`
     : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQDKWUgyPYinvZYb-8lbLAsCPp4j_toM09lQ&s";
 
   // State to manage the form visibility and time

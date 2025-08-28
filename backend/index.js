@@ -30,10 +30,10 @@ app.get("/", (req, res) => res.send("Hello, Backend!"));
 app.use("/api/v1/user", require("./Router/userRoute.js"));
 app.use("/api/v1", require("./Router/progressRoute.js"));
 app.use("/api/v1", require("./Router/roadmapRoute.js"));
-app.use("/api/image", express.static(`./upload/`));
-app.use("/uploads", express.static("uploads"));
-app.use("/api/resources", require("./Router/ResourceRoute.js"));
-app.use("/api/chat", require("./Routes/chatbotRoutes.js"));
+app.use("/api/v1/image", express.static(`./upload/`));
+app.use("/api/v1/uploads", express.static("uploads"));
+app.use("/api/v1/resources", require("./Router/ResourceRoute.js"));
+app.use("/api/v1/chat", require("./Routes/chatbotRoutes.js"));
 app.use("/api/v1", require("./Routes/ResumeRoute.js"));
 app.use("/api/v1", require("./Utils/InterviewGemini.js"));
 app.use("/api/v1", require("./Utils/CodeEditor.js"));
@@ -50,6 +50,7 @@ const io = new Server(server, {
     origin: true, // Allows all origins in development
     credentials: true,
   },
+  path: "/api/v1/socket.io",
 });
 
 // Integrate Socket.io logic

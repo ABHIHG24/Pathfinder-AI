@@ -10,7 +10,7 @@ const Navbar = () => {
   const dispatch = useDispatch(logoutUser());
 
   const img = user?.profilePhoto
-    ? `https://pathfinder-ai.onrender.com/api/image/${user?.profilePhoto}`
+    ? `${import.meta.env.VITE_API_BASE_URL}/image/${user?.profilePhoto}`
     : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQDKWUgyPYinvZYb-8lbLAsCPp4j_toM09lQ&s";
 
   const navItems = [

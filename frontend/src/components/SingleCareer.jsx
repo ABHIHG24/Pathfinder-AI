@@ -10,7 +10,7 @@ const SingleCareer = ({ roadmap, ID, showSelectButton = true }) => {
 
   const { careerTitle, description, image, roadmapSteps } = roadmap;
   console.log(image);
-  const img = `https://pathfinder-ai.onrender.com/api/image/${image}`;
+  const img = `${import.meta.env.VITE_API_BASE_URL}/image/${image}`;
   const user = useSelector((state) => state.userState.user);
 
   const [completedSteps, setCompletedSteps] = useState([]); // Initialize as an array
