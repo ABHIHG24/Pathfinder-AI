@@ -9,7 +9,7 @@ const DisplayResources = () => {
     const fetchResources = async () => {
       try {
         const response = await axios.get(
-          "https://pathfinder-ai.onrender.com/api/resources"
+          `${import.meta.env.VITE_API_BASE_URL}/resources`
         );
         // console.log(response.data);
         setResources(response.data);
@@ -57,7 +57,9 @@ const DisplayResources = () => {
                   )}
                   {resource.file && (
                     <a
-                      href={`https://pathfinder-ai.onrender.com/uploads/${resource.file}`}
+                      href={`${import.meta.env.VITE_API_BASE_URL}/uploads/${
+                        resource.file
+                      }`}
                       download
                       className="btn btn-link text-green-600 hover:underline"
                     >

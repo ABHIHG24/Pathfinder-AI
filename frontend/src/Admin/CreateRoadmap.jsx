@@ -86,7 +86,7 @@ function CreateRoadmap() {
 
     try {
       const response = await axios.post(
-        "https://pathfinder-ai.onrender.com/api/v1/roadmap/",
+        `${import.meta.env.VITE_API_BASE_URL}/roadmap/`,
         formData,
         {
           headers: {

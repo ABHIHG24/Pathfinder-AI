@@ -19,7 +19,7 @@ const Chatbot = () => {
 
     try {
       const res = await axios.post(
-        "https://pathfinder-ai.onrender.com/api/chat",
+        `${import.meta.env.VITE_API_BASE_URL}/chat`,
         {
           query: userInput,
         }

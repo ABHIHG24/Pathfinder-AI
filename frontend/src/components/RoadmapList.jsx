@@ -9,7 +9,7 @@ const RoadmapList = () => {
       {roadmap.roadmap.map((map) => {
         const { _id, careerTitle, description, image } = map;
 
-        const img = `https://pathfinder-ai.onrender.com/api/image/${image}`;
+        const img = `${import.meta.env.VITE_API_BASE_URL}/image/${image}`;
 
         return (
           <Link

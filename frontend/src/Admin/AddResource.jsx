@@ -31,7 +31,7 @@ const AddResource = () => {
       if (file) formData.append("file", file);
 
       await axios.post(
-        "https://pathfinder-ai.onrender.com/api/resources/add",
+        `${import.meta.env.VITE_API_BASE_URL}/resources/add`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
