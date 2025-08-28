@@ -5,7 +5,7 @@ const sendEmail = require("../Utils/email");
 const crypto = require("crypto");
 const ErrorHandler = require("../Utils/errorHandler");
 const catchAsyncErrors = require("../Middleware/catchAsyncErrors");
-const sendToken = require("../utils/jwtToken");
+const sendToken = require("../Utils/jwtToken");
 
 const login = catchAsyncErrors(async (req, res, next) => {
   // const { UsernameOrEmail, password, role } = req.body;
